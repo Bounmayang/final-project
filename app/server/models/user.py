@@ -26,6 +26,13 @@ class UpdateUserModel(BaseModel):
     
 def ResponseModel(data, message):
     return {
+        "data": data,
+        "code": 200,
+        "message": message,
+    }
+
+def ResponseModels(data, message):
+    return {
         "data": [data],
         "code": 200,
         "message": message,
