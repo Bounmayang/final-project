@@ -118,7 +118,7 @@ async def detect_eye_state_one(frame, payload):
         if prediction[0][0] > 0.30:
             result["status"] = "Closed"
             result["score"] += 1
-            if result["score"] > 3:
+            if result["score"] > 4:
                 play_sound = "YES"
                 sound.play()
         elif prediction[0][1] > 0.70:
